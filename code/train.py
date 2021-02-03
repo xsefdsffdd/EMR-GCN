@@ -163,7 +163,7 @@ class Trainer:
 
 
 if __name__ == "__main__":
-    istest = False
+    istest = True
     config = ModelConfig('../data/ruku.ini')
     # Set random seed
     seed = random.randint(1, 200)
@@ -213,7 +213,7 @@ if __name__ == "__main__":
         trainer.train()
         sess.close()
     else:
-        test_data = read_data('../data/test_sample.mask.json')
+        test_data = read_data('../data/test.mask.json')
         dataset_test = Dataset(test_data, 'test', config, shuffle=False, sequential=True)
         model.load(sess)
         trainer = Trainer([], [], dataset_test)
