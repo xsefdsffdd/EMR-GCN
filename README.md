@@ -5,6 +5,7 @@ The implementation of EMR-GCN in our paper:
 EMR-GCN: Electronic Medical Record based Graph Convolutional Network Learning
 
 Require
+
 Python 3.6
 
 Tensorflow 1.11.0
