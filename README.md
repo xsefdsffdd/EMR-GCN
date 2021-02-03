@@ -13,4 +13,4 @@ Reproducing Results
 
 Run python train.py 
 
-Because we did not publish the dataset this time, the preprocessing modules was not published. However, users could directly test by replacing the EMR document based on our pre-trained model.
+The dataset used in paper is not public, so that the preprocessing modules are not released. However, you can directly test the diagnostic result by replacing the EMR documents based on our pre-trained model.
