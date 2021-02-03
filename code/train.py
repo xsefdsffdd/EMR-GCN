@@ -170,7 +170,7 @@ if __name__ == "__main__":
     np.random.seed(seed)
     tf.set_random_seed(seed)
     # Settings
-    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+    os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
     # Define placeholders
     placeholders = {
@@ -213,9 +213,9 @@ if __name__ == "__main__":
         trainer.train()
         sess.close()
     else:
-        test_data = read_data('../data/test.mask.json')
+        test_data = read_data('../data/test_sample.mask.json')
         dataset_test = Dataset(test_data, 'test', config, shuffle=False, sequential=True)
         model.load(sess)
         trainer = Trainer([], [], dataset_test)
-        trainer.evaluate(trainer.d_test)
+        trainer.evaluate(0,trainer.d_test)
         sess.close()
